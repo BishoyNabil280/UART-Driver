@@ -1,0 +1,44 @@
+??:??:?? **** Build of configuration Debug for project UART_Design ****
+make all 
+Building file: ../MCAL/UART/uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"MCAL/UART/uart.d" -MT"MCAL/UART/uart.o" -c -o "MCAL/UART/uart.o" "../MCAL/UART/uart.c"
+Finished building: ../MCAL/UART/uart.c
+ 
+Building file: ../APP/app.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"APP/app.d" -MT"APP/app.o" -c -o "APP/app.o" "../APP/app.c"
+Finished building: ../APP/app.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: UART_Design.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,UART_Design.map -mmcu=atmega32 -o "UART_Design.elf"  ./MCAL/UART/uart.o  ./APP/app.o  ./main.o   
+Finished building target: UART_Design.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S UART_Design.elf  >"UART_Design.lss"
+Finished building: UART_Design.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 UART_Design.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     538 bytes (1.6% Full)
+(.text + .data + .bootloader)
+
+Data:         20 bytes (1.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+??:??:?? Build Finished. 0 errors, 0 warnings. (took 933ms)
+

@@ -1,0 +1,23 @@
+/*
+ * app.c
+ *
+ *      Author: Bishoy Nabil
+ */
+
+#include "app.h"
+
+uint8_t data;
+
+
+void System_Init()
+{
+	UART_init();
+}
+
+void System_Update()
+{
+	//Receive byte from terminal
+	data = UART_recieveByte();
+	//Sends Byte back to Terminal
+	UART_sendByte(data);
+}
